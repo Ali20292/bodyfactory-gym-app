@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Painted by the OS before the Flutter engine draws its first frame. Matching
+  it to the Dart splash background is what stops the app flashing white on
+  every cold start.
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@color/brand_black" />
+</layer-list>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Icon shown by the Android 12+ system splash screen. Without this the OS
+  falls back to the launcher icon.
+
+  The Body Factory mark, drawn as strokes so it matches the Dart splash
+  exactly. Source geometry lives in design/logo_animation/bodyfactory-scene.jsx
+  on a -160 -110 320 320 viewBox; here it is shifted into a 0 0 320 320 box
+  (x + 160, y + 110) because Android vectors cannot express a negative origin.
+
+    TL (-100,-45) -> (60,65)     TR (100,-45) -> (260,65)
+    BM (0,130)    -> (160,240)   J  (0,16)    -> (160,126)
+
+  The system splash clips to a circle of ~2/3 the icon size, so the group is
+  scaled to 0.62 to keep the whole triangle inside it.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="320"
+    android:viewportHeight="320">
+    <group
+        android:pivotX="160"
+        android:pivotY="160"
+        android:scaleX="0.62"
+        android:scaleY="0.62">
+        <!-- Outer triangle -->
+        <path
+            android:pathData="M60,65 L260,65 L160,240 Z"
+            android:strokeColor="@color/brand_accent"
+            android:strokeWidth="9"
+            android:strokeLineJoin="round"
+            android:strokeLineCap="round" />
+        <!-- Spokes from the joint to each corner -->
+        <path
+            android:pathData="M160,126 L60,65 M160,126 L260,65 M160,126 L160,240"
+            android:strokeColor="@color/brand_accent"
+            android:strokeWidth="9"
+            android:strokeLineCap="round" />
+    </group>
+</vector>

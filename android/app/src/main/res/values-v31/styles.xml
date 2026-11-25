@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Android 12+ replaced the plain window background with the system splash
+  screen API, which ignores windowBackground and draws the launcher icon on
+  its own background. These two attributes are the only way to control it
+  without pulling in androidx.core:core-splashscreen.
+-->
+<resources>
+    <style name="LaunchTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">@drawable/launch_background</item>
+        <item name="android:windowSplashScreenBackground">@color/brand_black</item>
+        <item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_launch_logo</item>
+    </style>
+    <style name="NormalTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">?android:colorBackground</item>
+    </style>
+</resources>

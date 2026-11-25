@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Native-side copies of the brand colours. These exist because the Android
+  window is painted before any Dart runs, so AppColors cannot reach it.
+  Keep in sync with lib/core/theme/app_colors.dart.
+-->
+<resources>
+    <!-- AppColors.brand -->
+    <color name="brand_black">#FF000000</color>
+    <!-- AppColors.accent — Body Factory orange -->
+    <color name="brand_accent">#FFF2481B</color>
+</resources>
